@@ -1,0 +1,31 @@
+.navbar-brand{
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+}
+
+.accordion-button[aria-controls="flush-collapseTwo"]:not(.collapsed){
+  color:red;
+}
+
+header .bg-image{
+  height: 400px;
+}
+
+.accordion-item{
+  border: none;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 768px) {
+  .text-white h6{
+    text-align: justify;
+    font-size: 75%;
+  }
+  .text-white h1{
+    font-size: 120%;
+  }
+
+  header .bg-image{
+    height: 300px;
+  }
+}

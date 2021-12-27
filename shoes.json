@@ -1,0 +1,87 @@
+{
+	"shoes": [
+        {   
+            "id":"shoe1",
+            "name":"Pure Tone",
+            "gender":"Women",
+            "style":"Flat",
+            "sizes":[4, 4.5, 5, 5.5, 6, 6.5, 7],
+            "price":75.00,
+            "colour":"Black",
+            "description":"These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+            "picture":"images/shoe1_0.jpg",
+            "url":"shoes/shoe1.html"
+        },
+		{
+            "id":"shoe2",
+            "name":"Orinoco 2 Lace",
+            "gender":"Women",
+            "style":"Boot",
+            "sizes":[5, 6, 7],
+			"price":89.00,
+            "colour":"Brown",
+			"description":"Refreshing our bestselling Orinoco profile, a lace-up ankle boot that stays all day wearable. The premium dark olive leather upper stays classic and crafted while the cleated sole with 3cm heel feels durable and adds grip. Perfect to step into the season with casual style.",
+			"picture":"images/shoe2_0.jpg",
+			"url":"shoes/shoe2.html"
+        },
+        {
+            "id":"shoe3",
+            "name":"Donaway Lace",
+            "gender":"Men",
+            "style":"Trainers",
+            "sizes":[6, 7, 7.5, 8, 9],
+			"price":75.00,
+            "colour":"Navy Nubuck",
+			"description":"Feel comfortable all day long in sports-inspired sneaker Donaway Lace. A stylish navy nubuck upper teams with a chunky sole for an athletic aesthetic, and cushioning underfoot offers targeted support that lasts.",
+			"picture":"images/shoe3_0.jpg",
+			"url":"shoes/shoe3.html"
+        },
+        {
+            "id":"shoe4",
+            "name":"Bensley Run Leather",
+            "gender":"Women",
+            "style":"Leather",
+            "sizes":[6, 7, 7.5, 8, 9],
+			"price":110.00,
+            "colour":"Black",
+			"description":"Shiny leathers are combined with a classic lace-up silhouette – making for a smart style that will suit every outfit. Oozing effortless style thanks to the stitching details, practical features include a durable sole and Ortholite® sock, which helps to reduce odour and keep feet fresh.",
+			"picture":"images/shoe4_0.jpg",
+			"url":"shoes/shoe4.html"
+        },
+        {
+            "id":"shoe5",
+            "name":"Scape Sky Youth",
+            "gender":"Men",
+            "style":"Leather",
+            "sizes":[3, 4, 5, 6, 7, 7.5],
+			"price":50.00,
+            "colour":"Black",
+			"description":"Durable for active young feet, these black leather school shoes with a triple riptape fastening feature protective accents on the toe and heel. The lightweight rubber sole with flex grooves enhances movement of the foot, while a padded collar, Agion infused lining and eco foam lined fabric sock provides comfort and support throughout the day. Available in whole and half sizes and different widths.",
+			"picture":"images/shoe5_0.jpg",
+			"url":"shoes/shoe5.html"
+        },
+        {
+            "id":"shoe6",
+            "name":"Citi Stride Walk",
+            "gender":"Men",
+            "style":"Leather",
+            "sizes":[3, 4, 5, 6.5, 7, 7.5, 8],
+			"price":85.00,
+            "colour":"Black",
+			"description":"Whether stepping into the office or smartening up for special occasions, your wardrobe will welcome Citi Stride Walk. Inspired by European shoemaking, its classic black leather upper has a contemporary toe shape and sits atop layers of recycled-content cushioning and a lightweight sole for a sleek look and a flexible, comfortable feel.",
+			"picture":"images/shoe6_0.jpg",
+			"url":"shoes/shoe6.html"
+        },
+        {
+            "id":"shoe7",
+            "name":"Chantry Walk",
+            "gender":"Men",
+            "style":"Smart Casual",
+            "sizes":[4, 5, 6.5, 7, 7.5, 8, 9, 9.5],
+			"price":89.00,
+            "colour":"Navy Nubuck",
+			"description":"Smart-casual style Chantry Walk redefines formal footwear, giving the traditional dress shoe a contemporary twist. The premium navy nubuck upper sits on an ExtraLight® sports-inspired sole, for an active aesthetic that feels lightweight. Shock-absorbing Cushion Plus™ technology and breathable leather linings guarantee comfort that stands up to the demands of the day.",
+			"picture":"images/shoe7_0.jpg",
+			"url":"shoes/shoe7.html"
+        }
+]}
