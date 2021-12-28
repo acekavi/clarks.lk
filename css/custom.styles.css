@@ -1,4 +1,8 @@
-.navbar-brand{
+body{
+  overflow-x: hidden;
+}
+
+.navbar-brand, .sectionHeaders{
   font-family: 'Dancing Script', cursive;
   font-weight: 600;
 }
@@ -15,17 +19,32 @@ header .bg-image{
   border: none;
 }
 
+.card-header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.color-dot {
+  height: 25px;
+  width: 25px;
+  margin: 0;
+  border-radius: 50%;
+  margin-left: 5px;
+  display: inline-block;
+  box-shadow: 0 0 5px rgb(56, 56, 56);
+}
+.dragged{
+  z-index: 999990;
+}
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 768px) {
   .text-white h6{
-    text-align: justify;
-    font-size: 75%;
-  }
-  .text-white h1{
-    font-size: 120%;
+    text-align: left;
   }
 
   header .bg-image{
-    height: 300px;
+    height: 93vh;
   }
 }

@@ -20,12 +20,14 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
 
     <!-- JQUERY -->
-    <link rel="stylesheet" href="css/jquery.ui.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/js/jquery.ui.js"></script>
+    <link rel="stylesheet" href="/css/jquery.ui.css">
 
     <!-- Customs -->
     <link rel="stylesheet" href="css/custom.styles.css">
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/uiscript.js"></script>
   </head>
   <body>
     
@@ -48,9 +50,8 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Men</a>
-              <a class="nav-link" href="#">Women</a>
-              <a class="nav-link" href="#">Kids</a>
+              <a class="nav-link" href="#Men">Men</a>
+              <a class="nav-link" href="#Women">Women</a>
             </div>
           </div>
         </div>
@@ -71,88 +72,114 @@
         </div>
       </div>
       <!-- Background image -->
+    </header>
 
-      <!-- Accordian -->
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="row lg-sticky-top">
-          <div class="col-md-4 col-sm-10">
-            <div class="input-group pt-2 justify-content-center">
-              <div class="form-outline">
-                <input id="search-input" type="search" id="form1" class="form-control" />
-                <label class="form-label" for="form1">Search</label>
-              </div>
-              <button id="search-button" type="button" class="btn btn-primary">
-                <i class="fas fa-search"></i>
-              </button>
+    <!-- Accordian -->
+    <div class="accordion accordion-flush sticky-md-top bg-light" id="accordionFlushExample">
+      <div class="row align-items-center">
+        <div class="col-md-4 col-sm-4">
+          <div class="input-group justify-content-center flex-nowrap">
+            <div class="form-outline">
+              <input id="search-input" type="search" id="form1" class="form-control" />
+              <label class="form-label" for="form1">Search</label>
             </div>
-
+            <button id="search-button" type="button" class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
-          <div class="col-md-4">
-            <h2 class="accordion-header" id="flush-headingOne">           
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-mdb-toggle="collapse"
-                data-mdb-target="#flush-collapseOne"
-                aria-expanded="false"
-                aria-controls="flush-collapseOne"
-              >
-                Filters &nbsp;<i class="fas fa-sliders-h"></i>
-              </button>
-            </h2>
-          </div>
+        </div>
 
-          <div class="col-md-4">
-            <h2 class="accordion-header" id="flush-headingTwo">
+        <div class="col-md-4 col-sm-4 ">
+          <h2 class="accordion-header" id="flush-headingOne">           
             <button
-              class="accordion-button collapsed sticky-top"
+              class="accordion-button collapsed"
               type="button"
               data-mdb-toggle="collapse"
-              data-mdb-target="#flush-collapseTwo"
+              data-mdb-target="#flush-collapseOne"
               aria-expanded="false"
-              aria-controls="flush-collapseTwo"
+              aria-controls="flush-collapseOne"
             >
+              Filters &nbsp;<i class="fas fa-sliders-h"></i>
+            </button>
+          </h2>
+        </div>
+
+        <div class="col-md-4 col-sm-4 droppable">
+          <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
             Favorites &nbsp;<i class="fas fa-heart"></i>
             </button>
           </h2>
         </div>
 
-        </div>
+      </div>
 
-        <div class="accordion-item">
-          <div
-            id="flush-collapseOne"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingOne"
-            data-mdb-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <!-- Filter options using jquery -->
-            </div>
-          </div>
-        </div>
-
-
-        <div class="accordion-item">
-          
-          <div
-            id="flush-collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingTwo"
-            data-mdb-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <!-- Favorites using jquery ui -->
-            </div>
+      <div class="accordion-item">
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-mdb-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <!-- Filter options using jquery -->
           </div>
         </div>
       </div>
-      <!-- Accordian -->
 
-    </header>
+
+      <div class="accordion-item">
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-mdb-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body text-center">
+            <!-- Favorites using jquery ui -->
+            <p>Oh No! You have no favorites yet, try adding some.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Accordian -->
+
     <main>
+      <div class="loadingItems">
+        <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center hot-picks" style="background-color: #fffddd;">
+          <!-- Hot picks go here -->
+        </div>
       
+        <div id="Men">
+          <!-- Shoes for Men go here -->
+          <h1 class="border-bottom text-center lh-lg sectionHeaders">Shoes for Men</h1>
+          
+          <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center section-men"></div>
+        </div>
+
+        <div id="Women">
+          <!-- Shoes for Women go here -->
+          <h1 class="border-bottom text-center lh-lg sectionHeaders">Shoes for Women</h1>
+
+          <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center section-women"></div>
+        </div>
+
+        <div id="Kids">
+          <!-- Shoes for Kids go here -->
+          <h1 class="border-bottom text-center lh-lg sectionHeaders">Shoes for Kids</h1>
+
+          <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center section-kids"></div>
+        </div>
+    </div>
     </main>
+
     <footer></footer>
 
 
@@ -160,5 +187,6 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/mainscript.js"></script>
+    
   </body>
 </html>
