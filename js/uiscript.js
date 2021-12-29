@@ -1,3 +1,20 @@
+// Stores colors
+let colorsArr = [];
+// Stores Styles 
+let stylesArr = [];
+//Stores Names 
+let namesArr = [];
+
+
+
+// $(function (){
+//   $(".colorBtn").on("click", function () {
+//     // $(this).remove();
+//     // $(this).attr("id");
+//     alert("pressed");
+//   });
+// });
+
 $('.droppable').droppable( {
   drop: handleDropEvent
 } );
@@ -7,47 +24,13 @@ function handleDropEvent( event, ui ) {
   alert( 'The square with ID "' + draggable.attr('id') + '" was dropped onto me!' );
 }
 
-$( "#accordion" ).accordion();
-
-var availableTags = [
-	"ActionScript",
-	"AppleScript",
-	"Asp",
-	"BASIC",
-	"C",
-	"C++",
-	"Clojure",
-	"COBOL",
-	"ColdFusion",
-	"Erlang",
-	"Fortran",
-	"Groovy",
-	"Haskell",
-	"Java",
-	"JavaScript",
-	"Lisp",
-	"Perl",
-	"PHP",
-	"Python",
-	"Ruby",
-	"Scala",
-	"Scheme"
-];
 $( "#autocomplete" ).autocomplete({
-	source: availableTags
-});
-
-$( "#button" ).button();
-$( "#button-icon" ).button({
-	icon: "ui-icon-gear",
-	showLabel: false
+	source: namesArr
 });
 
 $( "#radioset" ).buttonset();
 
 $( "#controlgroup" ).controlgroup();
-
-$( "#tabs" ).tabs();
 
 $( "#dialog" ).dialog({
 	autoOpen: false,
@@ -74,14 +57,19 @@ $( "#dialog-link" ).click(function( event ) {
 	event.preventDefault();
 });
 
-$( "#datepicker" ).datepicker({
-	inline: true
-});
-
-$( "#slider" ).slider({
-	range: true,
-	values: [ 17, 67 ]
-});
+$( function() {
+	$( "#slider-range" ).slider({
+		range: true,
+		min: 0,
+		max: 500,
+		values: [ 0, 250 ],
+		slide: function( event, ui ) {
+			$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+		}
+	});
+	$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+		" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+} );
 
 $( "#progressbar" ).progressbar({
 	value: 20
@@ -89,11 +77,8 @@ $( "#progressbar" ).progressbar({
 
 $( "#spinner" ).spinner();
 
-$( "#menu" ).menu();
+$( ".selectmenu" ).selectmenu();
 
-$( "#tooltip" ).tooltip();
-
-$( "#selectmenu" ).selectmenu();
 
 // Hover states on the static widgets
 $( "#dialog-link, #icons li" ).hover(
@@ -104,3 +89,30 @@ $( "#dialog-link, #icons li" ).hover(
 		$( this ).removeClass( "ui-state-hover" );
 	}
 );
+
+fetch("shoes.json")
+.then(response => {
+   return response.json();
+})
+.then(data => {
+  data.shoes.forEach((element, index, arr) => {
+    if (!namesArr.includes(element.name)) {
+			// only runs if value not in array
+			namesArr.push(element.name);
+		}
+
+		if (!stylesArr.includes(element.style.toLowerCase())) {
+			// only runs if value not in array
+			stylesArr.push(element.style.toLowerCase());
+			$("#styleMenu").append(`<option>${element.style}</option>`);
+		}
+
+		element.colour.forEach((color)=>{
+			if (!colorsArr.includes(color.toLowerCase())) {
+				// only runs if value not in array
+				colorsArr.push(color.toLowerCase());
+				$("#colorMenu").append(`<option>${color}</option>`);
+			}
+		});
+  });
+});

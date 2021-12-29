@@ -74,19 +74,31 @@
     <!-- Accordian -->
     <div class="accordion accordion-flush sticky-md-top bg-white border-bottom" id="accordionFlushExample">
       <div class="row align-items-center">
-        <div class="col-md-4 col-sm-4">
-          <div class="input-group justify-content-center flex-nowrap">
-            <div class="form-outline">
-              <input id="search-input form1 autocomplete" type="search" id="" class="form-control" />
-              <label class="form-label" for="form1">Search</label>
-            </div>
-            <button id="search-button" type="button" class="btn btn-primary">
+        <div class="col-md-8 col-sm-6 d-flex justify-content-around">
+          <!-- Search bar -->
+          <div class="input-group searchGroup">
+            <input type="search" id="autocomplete" class="form-control rounded" placeholder="Search" aria-label="Search"
+            aria-describedby="search-addon" />
+            <button type="button" data-mdb-ripple-color="blue" class="btn btn-outline-primary">
               <i class="fas fa-search"></i>
             </button>
           </div>
+
+          <!-- Gender radio btns -->
+          <div class="group desktop" 
+          data-mdb-toggle="tooltip"
+          data-mdb-placement="bottom"
+          title="Select Gender">
+            <div id="controlgroup">
+              <input type="checkbox" id="menBox" name="gender"><label for="menBox">Men</label>
+              <input type="checkbox" id="womenBox" name="gender"><label for="womenBox">Women</label>
+              <input type="checkbox" id="kidsBox" name="gender"><label for="kidsBox">Kids</label>
+            </div>
+          </div>
+
         </div>
 
-        <div class="col-md-4 col-sm-4 ">
+        <div class="col-md-2 col-sm-3">
           <h2 class="accordion-header" id="flush-headingOne">           
             <button
               class="accordion-button collapsed"
@@ -101,7 +113,7 @@
           </h2>
         </div>
 
-        <div class="col-md-4 col-sm-4 droppable">
+        <div class="col-md-2 col-sm-3 droppable">
           <h2 class="accordion-header" id="flush-headingTwo">
           <button
             class="accordion-button collapsed"
@@ -128,34 +140,38 @@
           <div class="accordion-body">
             <!-- Filter options using jquery -->
             <!-- gender radio buttons -->
-            <div class="row">
-              <h2 class="demoHeaders">Controlgroup</h2>
-              <fieldset>
-                <div id="controlgroup">
-                  <select id="car-type">
-                    <option>Compact car</option>
-                    <option>Midsize car</option>
-                    <option>Full size car</option>
-                    <option>SUV</option>
-                    <option>Luxury</option>
-                    <option>Truck</option>
-                    <option>Van</option>
+            <fieldset class="controlgroup">
+              <div class="row justify-content-center">
+                <div class="colorDiv col-md-3">
+                  <label for="colorMenu">Color : </label>
+                  <select id="colorMenu" class="selectmenu">
+                    <option value="" disabled selected>Select Color</option>
                   </select>
-                  <label for="transmission-standard">Standard</label>
-                  <input type="radio" name="transmission" id="transmission-standard">
-                  <label for="transmission-automatic">Automatic</label>
-                  <input type="radio" name="transmission" id="transmission-automatic">
-                  <label for="insurance">Insurance</label>
-                  <input type="checkbox" name="insurance" id="insurance">
-                  <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
-                  <input id="horizontal-spinner" class="ui-spinner-input">
-                  <button>Book Now!</button>
                 </div>
-              </fieldset>
-            </div>
+
+                <div class="styleDiv col-md-3">
+                  <label for="styleMenu">Style : </label>
+                  <select id="styleMenu" class="selectmenu">
+                    <option value="" disabled selected>Select Style</option>
+                  </select>
+                </div>
+
+                <div class="sizeDiv col-md-3">
+                  <label for="spinner">Size : </label>
+                  <input id="spinner" class="" disabled>
+                </div>
+              </div>
+
+              <div class="row justify-content-center align-items-center">
+                <label for="slider" class="priceDiv col-md-2">Price : 
+                  <input type="text" id="amount" class="fw-bold border-0 w-50" disabled>
+                </label>
+                <div class="sliderDiv col-md-3">
+                  <div id="slider-range"></div>
+                </div>
+              </div>
+            </fieldset>
             <!-- gender radio buttons -->
-
-
           </div>
         </div>
       </div>
@@ -179,10 +195,10 @@
 
     <main>
       <div class="loadingItems">
-        <div class="hot-picks" style="background-color: #fafafa;">
+        <div class="hot-picks" style="background-color: #ffe180;">
           <!-- Hot picks go here -->
-          <h1 class="border-bottom text-center lh-lg sectionHeaders">Hot Picks 🔥</h1>
-          <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center section-hotPicks"></div>
+          <h1 class="text-center lh-lg sectionHeaders">Hot Picks 🔥</h1>
+          <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 pb-5 justify-content-center section-hotPicks"></div>
         </div>
       
         <div id="Men">

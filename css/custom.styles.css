@@ -37,13 +37,46 @@ header .bg-image{
 .ui-selectmenu-open{
   z-index: 99999;
 }
-/* On screens that are 600px or less, set the background color to olive */
+
+.mobile{
+  display: none;
+}
+
+.desktop{
+  display: block;
+}
+
+.searchGroup{
+  width: 40%;
+  margin: 0;
+}
+
+.ui-autocomplete, .dragged{
+  z-index: 1021;
+}
+
+option{
+  text-transform: capitalize;
+}
+/* On screens that are 768px or less */
 @media screen and (max-width: 768px) {
+  .searchGroup{
+    width: 90%;
+    margin: 5px auto;
+  }
   .text-white h6{
     text-align: left;
   }
 
   header .bg-image{
     height: 93vh;
+  }
+
+  .mobile{
+    display: block;
+  }
+
+  .desktop{
+    display: none;
   }
 }
