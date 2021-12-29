@@ -20,14 +20,10 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
 
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="/js/jquery.ui.js"></script>
-    <link rel="stylesheet" href="/css/jquery.ui.css">
+	  <link href="css/jquery-ui.css" rel="stylesheet">
 
     <!-- Customs -->
     <link rel="stylesheet" href="css/custom.styles.css">
-    <!-- Custom scripts -->
-    <script type="text/javascript" src="js/uiscript.js"></script>
   </head>
   <body>
     
@@ -52,6 +48,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
               <a class="nav-link" href="#Men">Men</a>
               <a class="nav-link" href="#Women">Women</a>
+              <a class="nav-link" href="#Kids">Kids</a>
             </div>
           </div>
         </div>
@@ -75,12 +72,12 @@
     </header>
 
     <!-- Accordian -->
-    <div class="accordion accordion-flush sticky-md-top bg-light" id="accordionFlushExample">
+    <div class="accordion accordion-flush sticky-md-top bg-white border-bottom" id="accordionFlushExample">
       <div class="row align-items-center">
         <div class="col-md-4 col-sm-4">
           <div class="input-group justify-content-center flex-nowrap">
             <div class="form-outline">
-              <input id="search-input" type="search" id="form1" class="form-control" />
+              <input id="search-input form1 autocomplete" type="search" id="" class="form-control" />
               <label class="form-label" for="form1">Search</label>
             </div>
             <button id="search-button" type="button" class="btn btn-primary">
@@ -130,6 +127,35 @@
         >
           <div class="accordion-body">
             <!-- Filter options using jquery -->
+            <!-- gender radio buttons -->
+            <div class="row">
+              <h2 class="demoHeaders">Controlgroup</h2>
+              <fieldset>
+                <div id="controlgroup">
+                  <select id="car-type">
+                    <option>Compact car</option>
+                    <option>Midsize car</option>
+                    <option>Full size car</option>
+                    <option>SUV</option>
+                    <option>Luxury</option>
+                    <option>Truck</option>
+                    <option>Van</option>
+                  </select>
+                  <label for="transmission-standard">Standard</label>
+                  <input type="radio" name="transmission" id="transmission-standard">
+                  <label for="transmission-automatic">Automatic</label>
+                  <input type="radio" name="transmission" id="transmission-automatic">
+                  <label for="insurance">Insurance</label>
+                  <input type="checkbox" name="insurance" id="insurance">
+                  <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+                  <input id="horizontal-spinner" class="ui-spinner-input">
+                  <button>Book Now!</button>
+                </div>
+              </fieldset>
+            </div>
+            <!-- gender radio buttons -->
+
+
           </div>
         </div>
       </div>
@@ -153,8 +179,10 @@
 
     <main>
       <div class="loadingItems">
-        <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center hot-picks" style="background-color: #fffddd;">
+        <div class="hot-picks" style="background-color: #fafafa;">
           <!-- Hot picks go here -->
+          <h1 class="border-bottom text-center lh-lg sectionHeaders">Hot Picks 🔥</h1>
+          <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center section-hotPicks"></div>
         </div>
       
         <div id="Men">
@@ -177,7 +205,7 @@
 
           <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center section-kids"></div>
         </div>
-    </div>
+      </div>
     </main>
 
     <footer></footer>
@@ -185,7 +213,12 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
     <!-- Custom scripts -->
+    <script type="text/javascript" src="js/uiscript.js"></script>
+
     <script type="text/javascript" src="js/mainscript.js"></script>
     
   </body>

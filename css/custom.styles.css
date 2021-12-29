@@ -33,10 +33,9 @@ header .bg-image{
   border-radius: 50%;
   margin-left: 5px;
   display: inline-block;
-  box-shadow: 0 0 5px rgb(56, 56, 56);
 }
-.dragged{
-  z-index: 999990;
+.ui-selectmenu-open{
+  z-index: 99999;
 }
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 768px) {
