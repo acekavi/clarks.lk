@@ -77,9 +77,9 @@
         <div class="col-md-8 col-sm-6 d-flex justify-content-around">
           <!-- Search bar -->
           <div class="input-group searchGroup">
-            <input type="search" id="autocomplete" class="form-control rounded" placeholder="Search" aria-label="Search"
+            <input type="search" id="autocomplete" class="form-control rounded searchQuery" placeholder="Search" aria-label="Search"
             aria-describedby="search-addon" />
-            <button type="button" data-mdb-ripple-color="blue" class="btn btn-outline-primary">
+            <button type="button" data-mdb-ripple-color="blue" class="btn btn-outline-primary" id="searchBtn">
               <i class="fas fa-search"></i>
             </button>
           </div>
@@ -89,11 +89,11 @@
           data-mdb-toggle="tooltip"
           data-mdb-placement="bottom"
           title="Select Gender">
-            <div id="controlgroup">
-              <input type="checkbox" id="menBox" name="gender"><label for="menBox">Men</label>
-              <input type="checkbox" id="womenBox" name="gender"><label for="womenBox">Women</label>
-              <input type="checkbox" id="kidsBox" name="gender"><label for="kidsBox">Kids</label>
-            </div>
+            <fieldset>
+              <input type="checkbox" id="menBox" name="gender" value="men" checked><label for="menBox">Men</label>
+              <input type="checkbox" id="womenBox" name="gender" value="women" checked><label for="womenBox">Women</label>
+              <input type="checkbox" id="kidsBox" name="gender" value="kids" checked><label for="kidsBox">Kids</label>
+            </fieldset>
           </div>
 
         </div>
@@ -123,7 +123,7 @@
             aria-expanded="false"
             aria-controls="flush-collapseTwo"
           >
-            Favorites &nbsp;<i class="fas fa-heart"></i>
+            Favorites &nbsp;<i class="fas fa-heart"></i><span class="badge bg-danger ms-2">0</span>
             </button>
           </h2>
         </div>
@@ -162,12 +162,15 @@
                 </div>
               </div>
 
-              <div class="row justify-content-center align-items-center">
+              <div class="row justify-content-center mt-3 align-items-center">
                 <label for="slider" class="priceDiv col-md-2">Price : 
                   <input type="text" id="amount" class="fw-bold border-0 w-50" disabled>
                 </label>
                 <div class="sliderDiv col-md-3">
                   <div id="slider-range"></div>
+                </div>
+                <div class="col-md-2" role="group">
+                  <button type="button" class="btn btn-danger" data-mdb-color="dark" id="resetFilters">Reset All</button>
                 </div>
               </div>
             </fieldset>
@@ -184,9 +187,9 @@
           aria-labelledby="flush-headingTwo"
           data-mdb-parent="#accordionFlushExample"
         >
-          <div class="accordion-body text-center">
+          <div class="accordion-body text-center favoriteSection">
             <!-- Favorites using jquery ui -->
-            <p>Oh No! You have no favorites yet, try adding some.</p>
+            <div class="row favoriteCards"></div>
           </div>
         </div>
       </div>
@@ -220,6 +223,14 @@
           <h1 class="border-bottom text-center lh-lg sectionHeaders">Shoes for Kids</h1>
 
           <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 justify-content-center section-kids"></div>
+        </div>
+      </div>
+
+      <div class="searchItems">
+        <div class="row row-cols-2 row-cols-lg-6 row-cols-sm-3 g-4 mt-3 pb-5 justify-content-center searchResults"></div>
+
+        <div id="dialog" title="No Results Found">
+          <p>Oops... no results were found in this criteria. Try Again!</p>
         </div>
       </div>
     </main>

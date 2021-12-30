@@ -11,6 +11,13 @@ body{
   color:red;
 }
 
+.ui-dialog-titlebar-close::before{
+  content: "❌";
+  position: absolute;
+  top: -5px;
+  left: -4px;
+}
+
 header .bg-image{
   height: 400px;
 }
@@ -26,16 +33,8 @@ header .bg-image{
   font-size: 1.3em;
 }
 
-.color-dot {
-  height: 25px;
-  width: 25px;
-  margin: 0;
-  border-radius: 50%;
-  margin-left: 5px;
-  display: inline-block;
-}
-.ui-selectmenu-open{
-  z-index: 99999;
+.searchItems{
+  display: none;
 }
 
 .mobile{
@@ -51,12 +50,18 @@ header .bg-image{
   margin: 0;
 }
 
-.ui-autocomplete, .dragged{
+.ui-autocomplete, .ui-dialog, .ui-selectmenu-open {
   z-index: 1021;
 }
 
 option{
   text-transform: capitalize;
+}
+
+.favoriteCards{
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 /* On screens that are 768px or less */
 @media screen and (max-width: 768px) {

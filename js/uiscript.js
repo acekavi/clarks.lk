@@ -5,15 +5,9 @@ let stylesArr = [];
 //Stores Names 
 let namesArr = [];
 
-
-
-// $(function (){
-//   $(".colorBtn").on("click", function () {
-//     // $(this).remove();
-//     // $(this).attr("id");
-//     alert("pressed");
-//   });
-// });
+$( function() {
+	
+});
 
 $('.droppable').droppable( {
   drop: handleDropEvent
@@ -21,35 +15,33 @@ $('.droppable').droppable( {
 
 function handleDropEvent( event, ui ) {
   var draggable = ui.draggable;
-  alert( 'The square with ID "' + draggable.attr('id') + '" was dropped onto me!' );
+  // alert( 'The square with ID "' + draggable.attr('id') + '" was dropped onto me!' );
+	addtoFavorites(draggable.attr('id'));
 }
 
 $( "#autocomplete" ).autocomplete({
 	source: namesArr
 });
 
-$( "#radioset" ).buttonset();
+$( "input:checkbox" ).checkboxradio({
+	icon: false
+});
 
 $( "#controlgroup" ).controlgroup();
 
-$( "#dialog" ).dialog({
-	autoOpen: false,
-	width: 400,
-	buttons: [
-		{
-			text: "Ok",
-			click: function() {
-				$( this ).dialog( "close" );
-			}
+$( function() {
+	$( "#dialog" ).dialog({
+		autoOpen: false,
+		show: {
+			effect: "fade",
+			duration: 500
 		},
-		{
-			text: "Cancel",
-			click: function() {
-				$( this ).dialog( "close" );
-			}
+		hide: {
+			effect: "fade",
+			duration: 500
 		}
-	]
-});
+	});
+} );
 
 // Link to open the dialog
 $( "#dialog-link" ).click(function( event ) {
@@ -62,40 +54,42 @@ $( function() {
 		range: true,
 		min: 0,
 		max: 500,
-		values: [ 0, 250 ],
+		values: [ 0, 300 ],
 		slide: function( event, ui ) {
 			$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
 		}
 	});
 	$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
 		" - $" + $( "#slider-range" ).slider( "values", 1 ) );
-} );
+});
 
 $( "#progressbar" ).progressbar({
 	value: 20
 });
 
-$( "#spinner" ).spinner();
+$( "#spinner" ).spinner({
+	spin: function( event, ui ) {
+		if ( ui.value > 15 ) {
+			$( this ).spinner( "value", 3 );
+			return false;
+		} else if ( ui.value < 3 ) {
+			$( this ).spinner( "value", 15 );
+			return false;
+		}
+	}
+});
 
 $( ".selectmenu" ).selectmenu();
 
-
-// Hover states on the static widgets
-$( "#dialog-link, #icons li" ).hover(
-	function() {
-		$( this ).addClass( "ui-state-hover" );
-	},
-	function() {
-		$( this ).removeClass( "ui-state-hover" );
-	}
-);
-
+// Adding the options to ui menus and etc...
 fetch("shoes.json")
 .then(response => {
    return response.json();
 })
 .then(data => {
   data.shoes.forEach((element, index, arr) => {
+
+		//Excluding duplicates
     if (!namesArr.includes(element.name)) {
 			// only runs if value not in array
 			namesArr.push(element.name);
@@ -107,12 +101,10 @@ fetch("shoes.json")
 			$("#styleMenu").append(`<option>${element.style}</option>`);
 		}
 
-		element.colour.forEach((color)=>{
-			if (!colorsArr.includes(color.toLowerCase())) {
-				// only runs if value not in array
-				colorsArr.push(color.toLowerCase());
-				$("#colorMenu").append(`<option>${color}</option>`);
-			}
-		});
+		if (!colorsArr.includes(element.colour.toLowerCase())) {
+			// only runs if value not in array
+			colorsArr.push(element.colour.toLowerCase());
+			$("#colorMenu").append(`<option>${element.colour}</option>`);
+		}
   });
 });
