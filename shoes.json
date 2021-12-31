@@ -11,7 +11,7 @@
             "colourCodes":["Grey"],
             "description":"These chic snake print shoes are crafted from a combination of soft leather and nubuck. For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
             "picture":"img/shoe1/1.jpg",
-            "url":"shoes/shoe1.html"
+            "url":"details.html?shoeId=shoe1"
         },
 		{
             "id":"shoe2",
@@ -24,7 +24,7 @@
             "colourCodes":["Black"],
 			"description":"Refreshing our bestselling Orinoco profile, a lace-up ankle boot that stays all day wearable. The premium dark olive leather upper stays classic and crafted while the cleated sole with 3cm heel feels durable and adds grip. Perfect to step into the season with casual style.",
             "picture":"img/shoe2/1.jpg",
-			"url":"shoes/shoe2.html"
+			"url":"details.html?shoeId=shoe2"
         },
         {
             "id":"shoe3",
@@ -37,7 +37,7 @@
             "colourCodes":["#303F62","#7B6458"],
 			"description":"Feel comfortable all day long in sports-inspired sneaker Donaway Lace. A stylish navy nubuck upper teams with a chunky sole for an athletic aesthetic, and cushioning underfoot offers targeted support that lasts.",
             "picture":"img/shoe3/1.jpg",
-			"url":"shoes/shoe3.html"
+			"url":"details.html?shoeId=shoe3"
         },
         {
             "id":"shoe3-1",
@@ -50,7 +50,7 @@
             "colourCodes":["#7B6458", "#303F62"],
 			"description":"Feel comfortable all day long in sports-inspired sneaker Donaway Lace. A stylish navy nubuck upper teams with a chunky sole for an athletic aesthetic, and cushioning underfoot offers targeted support that lasts.",
             "picture":"img/shoe3-1/1.jpg",
-			"url":"shoes/shoe3-1.html"
+			"url":"details.html?shoe3-1.html"
         },
         {
             "id":"shoe4",
@@ -63,7 +63,7 @@
             "colourCodes":["Black"],
 			"description":"Shiny leathers are combined with a classic lace-up silhouette – making for a smart style that will suit every outfit. Oozing effortless style thanks to the stitching details, practical features include a durable sole and Ortholite® sock, which helps to reduce odour and keep feet fresh.",
             "picture":"img/shoe4/1.jpg",
-			"url":"shoes/shoe4.html"
+			"url":"details.html?shoeId=shoe4"
         },
         {
             "id":"shoe5",
@@ -76,7 +76,7 @@
             "colourCodes":["Black"],
 			"description":"Durable for active young feet, these black leather school shoes with a triple riptape fastening feature protective accents on the toe and heel. The lightweight rubber sole with flex grooves enhances movement of the foot, while a padded collar, Agion infused lining and eco foam lined fabric sock provides comfort and support throughout the day. Available in whole and half sizes and different widths.",
             "picture":"img/shoe5/1.jpg",
-			"url":"shoes/shoe5.html"
+			"url":"details.html?shoeId=shoe5"
         },
         {
             "id":"shoe6",
@@ -89,7 +89,7 @@
             "colourCodes":["Black","#69443C"],
 			"description":"Whether stepping into the office or smartening up for special occasions, your wardrobe will welcome Citi Stride Walk. Inspired by European shoemaking, its classic black leather upper has a contemporary toe shape and sits atop layers of recycled-content cushioning and a lightweight sole for a sleek look and a flexible, comfortable feel.",
             "picture":"img/shoe6/1.jpg",
-			"url":"shoes/shoe6.html"
+			"url":"details.html?shoeId=shoe6"
         },
         {
             "id":"shoe6-1",
@@ -102,7 +102,7 @@
             "colourCodes":["#69443C","Black"],
 			"description":"Whether stepping into the office or smartening up for special occasions, your wardrobe will welcome Citi Stride Walk. Inspired by European shoemaking, its classic black leather upper has a contemporary toe shape and sits atop layers of recycled-content cushioning and a lightweight sole for a sleek look and a flexible, comfortable feel.",
             "picture":"img/shoe6-1/1.jpg",
-			"url":"shoes/shoe6-1.html"
+			"url":"details.html?shoeId=shoe6-1"
         },
         {
             "id":"shoe7",
@@ -115,7 +115,7 @@
             "colourCodes":["#303F62","Black"],
 			"description":"Smart-casual style Chantry Walk redefines formal footwear, giving the traditional dress shoe a contemporary twist. The premium navy nubuck upper sits on an ExtraLight® sports-inspired sole, for an active aesthetic that feels lightweight. Shock-absorbing Cushion Plus™ technology and breathable leather linings guarantee comfort that stands up to the demands of the day.",
             "picture":"img/shoe7/1.jpg",
-			"url":"shoes/shoe7.html"
+			"url":"details.html?shoeId=shoe7"
         },
         {
             "id":"shoe7-1",
@@ -128,7 +128,7 @@
             "colourCodes":["Black","#303F62"],
 			"description":"Smart-casual style Chantry Walk redefines formal footwear, giving the traditional dress shoe a contemporary twist. The premium navy nubuck upper sits on an ExtraLight® sports-inspired sole, for an active aesthetic that feels lightweight. Shock-absorbing Cushion Plus™ technology and breathable leather linings guarantee comfort that stands up to the demands of the day.",
             "picture":"img/shoe7-1/1.jpg",
-			"url":"shoes/shoe7-1.html"
+			"url":"details.html?shoeId=shoe7-1"
         },
         {
             "id":"shoe8",
@@ -141,7 +141,7 @@
             "colourCodes":["#DCDCDC"],
 			"description":"The perfect pair of holiday sandals, Brinkley Sea is a bestselling flip-flop from our Cloudsteppers™ collection. With a sporty, feminine aesthetic, these super-comfortable sandals have a playful design on the footbed for added interest and an adjustable riptape fastening on the T-bar for a secure, all-day fit.",
             "picture":"img/shoe8/1.jpg",
-			"url":"shoes/shoe8.html"
+			"url":"details.html?shoeId=shoe8"
         },
         {
             "id":"shoe9",
@@ -154,7 +154,7 @@
             "colourCodes":["Black"],
 			"description":"With its snuggly faux fur collar and heritage biker aesthetic, Astrol Hiker is a super-cute mini-me everyday toddler boot. Crafted in premium black leather, little toes stay fresh all day thanks to a breathable sketch mesh lining and Agion® microbial technology. The inside zips help get boots on and off in a jiffy, too.",
             "picture":"img/shoe9/1.jpg",
-			"url":"shoes/shoe9.html"
+			"url":"details.html?shoeId=shoe9"
         },
         {
             "id":"shoe10",
@@ -167,6 +167,6 @@
             "colourCodes":["#303F62"],
 			"description":"Their sports kit has never looked so fresh! Kids' trainer Aeon Pace returns, here in a cool blue and grey finish. The compressed EVA midsole offers brilliant shock absorption while heel and toe protection and a durable, cleated rubber sole make for stable and flexible movement – ideal for adding an extra spring in their step. A breathable mesh and leather upper and Agion®-infused lining keep feet feeling cool, and riptape fastenings make this pair super easy to take on and off – great for on-the-go feet. Extra comfort comes from the eco foam-lined fabric sock and padding in the collar and tongue. Available in whole and half sizes and different widths.",
             "picture":"img/shoe10/1.jpg",
-			"url":"shoes/shoe10.html"
+			"url":"details.html?shoeId=shoe10"
         }
 ]}

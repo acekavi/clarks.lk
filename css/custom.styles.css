@@ -63,6 +63,20 @@ option{
   flex-wrap: nowrap;
   width: 100%;
 }
+
+.sliderImage{
+  margin: 0px auto;
+}
+
+.parallax{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img-thumbnail{
+  width: 100px;
+}
 /* On screens that are 768px or less */
 @media screen and (max-width: 768px) {
   .searchGroup{

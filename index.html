@@ -21,6 +21,8 @@
 
     <!-- JQUERY -->
 	  <link href="css/jquery-ui.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 
     <!-- Customs -->
     <link rel="stylesheet" href="css/custom.styles.css">
@@ -31,7 +33,7 @@
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand fs-3" href="#">Clarks.lk</a>
+          <a class="navbar-brand fs-3">Clarks.lk</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -57,7 +59,7 @@
 
       <!-- Background image -->
       <div
-      class="p-5 text-center bg-image"
+      class="p-5 text-center bg-image parallax"
       style="background-image: url('img/bg-header.jpg');">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
           <div class="d-flex justify-content-center align-items-center h-100">
@@ -74,7 +76,7 @@
     <!-- Accordian -->
     <div class="accordion accordion-flush sticky-md-top bg-white border-bottom" id="accordionFlushExample">
       <div class="row align-items-center">
-        <div class="col-md-8 col-sm-6 d-flex justify-content-around">
+        <div class="col-md-5 col-sm-6 d-flex justify-content-around">
           <!-- Search bar -->
           <div class="input-group searchGroup">
             <input type="search" id="autocomplete" class="form-control rounded searchQuery" placeholder="Search" aria-label="Search"
@@ -83,9 +85,10 @@
               <i class="fas fa-search"></i>
             </button>
           </div>
-
+        </div>
+        <div class="col-md-2 col-sm-3 justify-content-center d-flex">
           <!-- Gender radio btns -->
-          <div class="group desktop" 
+          <div class="group" 
           data-mdb-toggle="tooltip"
           data-mdb-placement="bottom"
           title="Select Gender">
@@ -95,7 +98,6 @@
               <input type="checkbox" id="kidsBox" name="gender" value="kids" checked><label for="kidsBox">Kids</label>
             </fieldset>
           </div>
-
         </div>
 
         <div class="col-md-2 col-sm-3">
@@ -140,7 +142,7 @@
           <div class="accordion-body">
             <!-- Filter options using jquery -->
             <!-- gender radio buttons -->
-            <fieldset class="controlgroup">
+            <fieldset class="controlgroup ">
               <div class="row justify-content-center">
                 <div class="colorDiv col-md-3">
                   <label for="colorMenu">Color : </label>
@@ -235,18 +237,54 @@
       </div>
     </main>
 
-    <footer></footer>
-
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/acekavi/" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="mailto:dfntlynotace@gmail.com" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/acekavi/" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/acekavi/" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/acekavi" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright :
+        <a class="text-white" href="https://www.acekavi.me/">Avishka Kavinda</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
 
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/uiscript.js"></script>
 
-    <script type="text/javascript" src="js/mainscript.js"></script>
-    
+    <script type="text/javascript" src="js/mainscript.js"></script>  
   </body>
 </html>

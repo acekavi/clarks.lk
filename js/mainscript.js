@@ -245,11 +245,11 @@ function generateFavoriteCard(element){
     }
   });
 };
+
 // List of the favorites
 let favList;
 
 // Function that runs after the window loaded completely
-
 $(window).bind("load", function() {
   // conditional statement that checks if localStorage already exists
   if (localStorage.getItem('favShoes')) {
@@ -258,12 +258,7 @@ $(window).bind("load", function() {
     favList = [];
   }
 
-  objectArr.forEach(shoeObj => {
-    if(favList.includes(shoeObj.id)){
-      generateFavoriteCard(shoeObj);
-    }
-  });
-
+  refreshFavorites();
   $("span.badge").html(`${favList.length}`);
 });
 
@@ -285,7 +280,8 @@ function addtoFavorites(shoeID){
           return currentObj;
         }
       });
-      generateFavoriteCard(newCard[0]);
+      
+      refreshFavorites();
       localStorage.setItem("favShoes", JSON.stringify(favList));
     }
   } catch (e) {
@@ -295,4 +291,14 @@ function addtoFavorites(shoeID){
           console.log("Error: Saving to local storage");
       }
   }
+}
+
+function refreshFavorites(){
+  $("div.favoriteCards").html(``);
+
+  objectArr.forEach(shoeObj => {
+    if(favList.includes(shoeObj.id)){
+      generateFavoriteCard(shoeObj);
+    }
+  });
 }

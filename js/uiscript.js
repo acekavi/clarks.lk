@@ -5,9 +5,9 @@ let stylesArr = [];
 //Stores Names 
 let namesArr = [];
 
-$( function() {
+// $( function() {
 	
-});
+// });
 
 $('.droppable').droppable( {
   drop: handleDropEvent
@@ -41,7 +41,7 @@ $( function() {
 			duration: 500
 		}
 	});
-} );
+});
 
 // Link to open the dialog
 $( "#dialog-link" ).click(function( event ) {
