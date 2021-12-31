@@ -35,6 +35,7 @@ $(window).bind("load", function() {
   $("li.shoeColor").html(`Colour : ${currentShoedObj[0].colour}`);
   $("p.shoeDescription").html(`${currentShoedObj[0].description}`);
   $(".draggable").attr("id", `${currentShoedObj[0].id}`);
+  $( ".placeholder" ).removeClass( "placeholder" )
 
   currentShoedObj[0].sizes.forEach(thiSize => {
     $(`div.sizesSection`).append(`
@@ -61,5 +62,5 @@ $( function() {
 } );
 
 function handleDropEvent(){
-  
+
 }
