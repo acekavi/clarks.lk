@@ -81,6 +81,7 @@ $(window).bind("load", function() {
 
   refreshFavorites();
   $("span.badge").html(`${favList.length}`);
+
 });
 
 //Adding to favorites
@@ -158,3 +159,8 @@ function generateFavoriteCard(element){
     }
   });
 };
+
+$(".sliderImage").click(function() {
+  const imgIndex = $(this).attr("src");
+  $("#expanded-img").attr("src", imgIndex);
+});
